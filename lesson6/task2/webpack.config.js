@@ -1,12 +1,14 @@
-const path = require('path');
-
 module.exports = {
-    entry: {
-    profile: './src/profile/index.js',
-    dashboard: './src/dashboard/index.js',
-  },
+    entry: './src/index.js',
   output: {
-    filename: '[name].js',
-    path: path.join(__dirname, 'build')
+    filename: 'bundle.js',
   },
+  module: {
+    rules: [
+        {
+            test: /.js$/,
+            use: ['babel-loader']
+        },
+    ]
+  }
 };
