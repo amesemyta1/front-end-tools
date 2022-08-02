@@ -2,7 +2,7 @@ import { initTodoListHandlers } from './list/todoList.js';
 import { renderTasks } from './list/render.js';
 import { createTask, getTasksList } from './list/tasksGateway.js';
 import { setItem } from './list/storage.js';
-import './index.css';
+import './index.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
   getTasksList().then(tasksList => {
