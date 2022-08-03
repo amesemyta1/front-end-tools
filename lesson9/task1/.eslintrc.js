@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  extends: ['eslint-config-airbnb-base'],
   env: {
     es6: true,
     jest: true,
@@ -19,5 +19,9 @@ module.exports = {
     'import/no-dynamic-require': 0,
     'import/prefer-default-export': 0,
     'prefer-template': 0,
+  },
+  parserOptions: {
+    ecmaVersion: 10,
+    sourceType: 'module',
   },
 };
