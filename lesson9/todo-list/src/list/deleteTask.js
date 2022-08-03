@@ -2,13 +2,13 @@ import { renderTasks } from './render.js';
 import { deleteTask, getTasksList } from './tasksGateway.js';
 import { setItem } from './storage.js';
 
-export const deleteTaskFunc = e => {
+export const deleteTaskFunc = (e) => {
   const listElem = document.querySelector('.list');
   const taskId = e.target.dataset.id;
 
   deleteTask(taskId)
     .then(() => getTasksList())
-    .then(newTasksList => {
+    .then((newTasksList) => {
       setItem('tasksList', newTasksList);
       listElem.innerHTML = '';
       renderTasks();

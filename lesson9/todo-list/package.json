@@ -4,6 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
         "build": "webpack -p",
         "start": "webpack-dev-server -d --devtool eval-source-maps --open"
     },
@@ -17,6 +19,9 @@
         "babel-loader": "^8.0.6",
         "clean-webpack-plugin": "^3.0.0",
         "css-loader": "^3.3.2",
+        "eslint": "^8.21.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0",
         "file-loader": "^5.0.2",
         "html-webpack-plugin": "^3.2.0",
         "mini-css-extract-plugin": "^0.8.0",
